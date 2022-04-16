@@ -19,7 +19,7 @@ function signIn({ providers }) {
                 Sign in with {provider.name}
               </button>
 
-              <div className="absolute bottom-4 flex justify-items-center items-center w-1/2 ">
+              <div className="absolute bottom-4 flex justify-items-center items-center ">
                 <p className="text-xs   ">Created with ❤ By -</p>
                 <p className="text-xs font-bold ml-1">OM PRAKASH</p>
               </div>
