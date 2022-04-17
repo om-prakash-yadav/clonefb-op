@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {ThumbUpIcon, ShareIcon, ChatAltIcon} from "@heroicons/react/outline"
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 
 
