@@ -37,7 +37,7 @@ function Post({ name, message, postImage, image, timestamp }) {
       <div className="flex justify-between items-center md:rounded-b-2xl bg-white shadow-md text-gray-400 border-t">
         <div className="inputIcon rounded-none md:rounded-bl-2xl ">
           <div>
-            <ThumbUpIcon className="h-4 md:h-6 text-blue-500" />
+            <ThumbUpIcon className="h-5 md:h-6 text-blue-500" />
             <p className="flex text-xs justify-center items-center sm:text-base">
               Like
             </p>
@@ -46,7 +46,7 @@ function Post({ name, message, postImage, image, timestamp }) {
 
         <div className="inputIcon rounded-none ">
           <div>
-            <ChatAltIcon className="h-4 md:h-6 text-gray-500"/>
+            <ChatAltIcon className="h-5 md:h-6 text-gray-500"/>
             <p className="flex text-xs justify-center items-center sm:text-base">
               Comment
             </p>
@@ -55,7 +55,7 @@ function Post({ name, message, postImage, image, timestamp }) {
 
         <div className="inputIcon rounded-none md:rounded-br-2xl">
           <div>
-            <ShareIcon className="h-4 md:h-6 text-gray-500"/>
+            <ShareIcon className="h-5 md:h-6 text-gray-500"/>
             <p className="flex text-xs justify-center items-center sm:text-base">
               Share
             </p>

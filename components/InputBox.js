@@ -111,7 +111,7 @@ function InputBox() {
       </div>
       <div className="flex justify-evenly md:p-3 border-t">
         <div className="inputIcon">
-          <VideoCameraIcon className="h-4 md:h-7 text-red-500 " />
+          <VideoCameraIcon className="h-5 md:h-7 text-red-500 " />
           <p className="text-xs md:flex md:text-sm  ">Live Video</p>
         </div>
         <div
@@ -120,7 +120,7 @@ function InputBox() {
           }}
           className="inputIcon"
         >
-          <CameraIcon className=" h-4 md:h-7 text-green-400 " />
+          <CameraIcon className=" h-5 md:h-7 text-green-400 " />
           <p className="text-xs md:flex md:text-sm">Photo/Video</p>
           <input
             ref={filepickerRef}
@@ -130,7 +130,7 @@ function InputBox() {
           />
         </div>
         <div className="inputIcon">
-          <EmojiHappyIcon className="h-4 md:h-7 text-yellow-300" />
+          <EmojiHappyIcon className="h-5 md:h-7 text-yellow-300" />
           <p className="text-xs md:flex md:text-sm">Feeling</p>
         </div>
       </div>
