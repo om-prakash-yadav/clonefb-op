@@ -3,9 +3,9 @@ import { getProviders, signIn as SignIntoProvider } from "next-auth/react";
 function signIn({ providers }) {
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen py-2 -mt-20 px-14 bg-gray-100">
-      <img className="w-80" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="" />
-        <h1 className="text-md  md:text-3xl">Facebook helps you connect and share with the people in your life.</h1>
+      {/* <div className="flex flex-col items-center justify-center min-h-screen py-2 -mt-20 px-14 bg-gray-100">
+      <img className="w-80" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="facebook" />
+        <h1 className="text-md  md:text-3xl">This is only a clone not actual Facebook.</h1>
 
         <div className="mt-8 ">
           {Object.values(providers).map((provider) => (
@@ -18,16 +18,38 @@ function signIn({ providers }) {
               >
                 Sign in with {provider.name}
               </button>
-
-              <div className="absolute h-6 bottom-4 flex justify-items-center items-center ">
-                <p className="text-xs   ">Created with ❤ By -</p>
-                <p className="text-xs font-bold ml-1">OM PRAKASH</p>
-              </div>
             </div>
           ))}
         </div>
-      </div>
-    </>
+              </div>  */}
+
+
+<div className="p-20 h-screen w-screen flex flex-col md:flex-row items-center justify-center bg-gray-100">
+  <div className="content text-sm mb-6 md:text-3xl text-center md:text-left">
+    <h1 className="text-4xl md:text-6xl text-blue-500 font-bold">Facebook</h1>
+    <p>Connect with friends and the world around you on Facebook.</p>
+  </div>
+  <div className="container mx-auto flex flex-col items-center">
+    <form className="drop-shadow-xl w-80 md:w-96 p-6 flex flex-col bg-white rounded-lg h-64 items-center justify-center">
+      {Object.values(providers).map((provider) => (
+            <div key={provider.name}>
+              <button
+                className="md:p-3 p-2 px-3 bg-blue-500 text-white rounded-md"
+                onClick={() =>
+                  SignIntoProvider(provider.id, { callbackUrl: "/" })
+                }
+              >
+                Sign in with {provider.name}
+              </button>
+            </div>
+          ))}
+    </form>
+    <p className="text-center text-sm my-4">
+      <span className="font-semibold text-center w-full">Create a Page</span> for a celebrity, band or business
+    </p>
+  </div>
+</div>
+    </> 
   );
 }
 
