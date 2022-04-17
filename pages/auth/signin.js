@@ -9,7 +9,7 @@ function signIn({ providers }) {
     <p>Connect with friends and the world around you on Facebook.</p>
   </div>
   <div className="container mx-auto flex flex-col items-center">
-    <form className="drop-shadow-xl w-80 md:w-96 p-6 flex flex-col bg-white rounded-lg h-64 items-center justify-center">
+    <div className="drop-shadow-xl w-80 md:w-96 p-6 flex flex-col bg-white rounded-lg h-64 items-center justify-center">
       {Object.values(providers).map((provider) => (
             <div key={provider.name}>
               <button
@@ -22,10 +22,7 @@ function signIn({ providers }) {
               </button>
             </div>
           ))}
-    </form>
-    <p className="text-center text-sm my-4">
-      <span className="font-semibold text-center w-full">Create a Page</span> for a celebrity, band or business
-    </p>
+    </div>
   </div>
 </div>
     </> 
