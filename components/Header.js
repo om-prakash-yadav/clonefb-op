@@ -47,17 +47,17 @@ function Header() {
         {/* mobile view  */}
         <div className="flex md:hidden items-center justify-between w-full">
           <img
-            className="h-16"
+            className="h-10"
             src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"
             alt="facebook"
           />
           <div className="flex items-center">
             <div className="flex ml-2 items-center  rounded-full bg-gray-100 p-2">
-              <SearchIcon className="h-6" />
+              <SearchIcon className="h-4" />
 
             
             </div>
-            <LogoutIcon className="h-8 mx-2" onClick={signOut} />
+            <LogoutIcon className="h-6 mx-2" onClick={signOut} />
           </div>
         </div>
 
@@ -92,7 +92,7 @@ function Header() {
           <ChevronDownIcon className="icon" />
         </div>
       </div>
-      <div className="flex md:hidden justify-center space-x-10 w-full py-2  shadow-md ">
+      <div className="flex md:hidden justify-center space-x-8 w-full py-2  shadow-md ">
         <HeaderIcon  active Icon={HomeIcon}/>
         <HeaderIcon Icon={UsersIcon} />
         <HeaderIcon Icon={ChatIcon} />
