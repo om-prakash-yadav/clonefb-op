@@ -70,7 +70,7 @@ function InputBox() {
   };
 
   return (
-    <div className="bg-white  p-2 rounded-2xl shadow-md text-gray-500 font-medium mt-6">
+    <div className="bg-white  p-2  shadow-md text-gray-500 font-medium md:rounded-xl md:mt-4">
      
      {imageToPost && (
           <div
@@ -93,7 +93,7 @@ function InputBox() {
       <div className="flex space-x-4 p-4 min-w-fit items-center flex-shrink-0">
         <Image
           className="rounded-full flex-shrink-0"
-          src="https://links.papareact.com/5me"
+          src={session.user.image}
           width={40}
           height={40}
           layout="fixed"
@@ -103,7 +103,7 @@ function InputBox() {
             className="rounded-full text-sm flex-grow h-12 bg-gray-100 px-5 focus:outline-none"
             type="text"
             ref={inputRef}
-            placeholder={`Welome ! ,  ${session.user.name} `}
+            placeholder={`Whats on your mind, ${ session.user.name}? `}
           />
           <button type="submit" hidden onClick={sendPost}></button>
         </form>
@@ -112,7 +112,7 @@ function InputBox() {
       <div className="flex justify-evenly p-3 border-t">
         <div className="inputIcon">
           <VideoCameraIcon className="h-7 text-red-500 " />
-          <p className="hidden md:flex md:text-sm  ">Live Video</p>
+          <p className="text-xs md:flex md:text-sm  ">Live Video</p>
         </div>
         <div
           onClick={() => {
@@ -120,8 +120,8 @@ function InputBox() {
           }}
           className="inputIcon"
         >
-          <CameraIcon className="h-7 text-green-400 " />
-          <p className="hidden md:flex md:text-sm">Photo/Video</p>
+          <CameraIcon className=" h-7 text-green-400 " />
+          <p className="text-xs md:flex md:text-sm">Photo/Video</p>
           <input
             ref={filepickerRef}
             type="file"
@@ -131,7 +131,7 @@ function InputBox() {
         </div>
         <div className="inputIcon">
           <EmojiHappyIcon className="h-7 text-yellow-300" />
-          <p className="hidden md:flex md:text-sm">Feeling/Activity</p>
+          <p className="text-xs md:flex md:text-sm">Feeling</p>
         </div>
       </div>
     </div>

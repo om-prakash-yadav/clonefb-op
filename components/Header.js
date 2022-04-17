@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { signOut, useSession } from "next-auth/react";
 import {
-  BellIcon,
-  ChatIcon,
+  
+ 
   ChevronDownIcon,
   HomeIcon,
   MenuIcon,
@@ -10,33 +10,54 @@ import {
   ViewGridIcon,
 } from "@heroicons/react/solid";
 import {
+  ChatIcon,
+  BellIcon,
   FlagIcon,
   PlayIcon,
   ShoppingCartIcon,
   SearchIcon,
+  LogoutIcon,
+  UsersIcon,
 } from "@heroicons/react/outline";
 import HeaderIcon from "./HeaderIcon";
 
 function Header() {
   const { data: session } = useSession();
   return (
-    <div className="flex-1 overflow-hidden justify-items-center ">
+    <div className="flex-1 border-b-2 md:border-none overflow-hidden justify-items-center ">
       <div className="sticky top-0 z-50 bg-white items-center flex justify-between  lg:px-5 ">
         {/* left */}
-        <div className="flex items-center p-1">
+        <div className="hidden md:flex items-center p-2">
           <Image
             src="https://links.papareact.com/5me"
             width={40}
             height={40}
             layout="fixed"
           />
-          <div className="flex ml-2 items-center rounded-full bg-gray-100 p-2">
+          <div className="flex ml-2 items-center  rounded-full bg-gray-100 p-2">
             <SearchIcon className="h-6" />
             <input
               className="inline-flex ml-2 items-center bg-transparent outline-none placeholder-gray-500 flex-shrink w-40"
               type="text"
               placeholder="Search facebook"
             />
+          </div>
+        </div>
+
+        {/* mobile view  */}
+        <div className="flex md:hidden items-center justify-between w-full">
+          <img
+            className="h-16"
+            src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"
+            alt="facebook"
+          />
+          <div className="flex items-center">
+            <div className="flex ml-2 items-center  rounded-full bg-gray-100 p-2">
+              <SearchIcon className="h-6" />
+
+            
+            </div>
+            <LogoutIcon className="h-8 mx-2" onClick={signOut} />
           </div>
         </div>
 
@@ -52,7 +73,7 @@ function Header() {
         </div>
 
         {/* right */}
-        <div className="flex items-center sm:space-x-2 justify-end p-1">
+        <div className="hidden md:flex items-center sm:space-x-2 justify-end p-1">
           {/* profile pic */}
           <Image
             onClick={signOut}
@@ -71,11 +92,12 @@ function Header() {
           <ChevronDownIcon className="icon" />
         </div>
       </div>
-      <div className="flex md:hidden justify-center space-x-12 py-2  shadow-md ">
-        <HeaderIcon active Icon={HomeIcon} />
+      <div className="flex md:hidden justify-center space-x-10 w-full py-2  shadow-md ">
+        <HeaderIcon  active Icon={HomeIcon}/>
+        <HeaderIcon Icon={UsersIcon} />
+        <HeaderIcon Icon={ChatIcon} />
+        <HeaderIcon Icon={BellIcon} />
         <HeaderIcon Icon={PlayIcon} />
-        <HeaderIcon Icon={FlagIcon} />
-        <HeaderIcon Icon={ShoppingCartIcon} />
         <HeaderIcon Icon={MenuIcon} />
       </div>
     </div>

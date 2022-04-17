@@ -2,7 +2,7 @@ import { signIn } from "next-auth/react";
 
 function Login() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 -mt-20 px-14 text-center">
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 -mt-20 px-14 text-center bg-gray-100">
       <img
         className="w-80"
         src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"
@@ -15,7 +15,7 @@ function Login() {
       <div className="mt-8 ">
         <button
           onClick={signIn}
-          className="md:p-3 p-2 px-3 bg-blue-600 text-white rounded-md animate-pulse"
+          className="md:p-3 p-2 px-3 bg-blue-600 text-white rounded-md hover:bg-blue-500"
         >
           Get Started
         </button>
