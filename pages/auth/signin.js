@@ -3,7 +3,7 @@ import { getProviders, signIn as SignIntoProvider } from "next-auth/react";
 function signIn({ providers }) {
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen py-2 -mt-20 px-14 ">
+      <div className="flex flex-col items-center justify-center min-h-screen py-2 -mt-20 px-14 bg-gray-100">
       <img className="w-80" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="" />
         <h1 className="text-md  md:text-3xl">Facebook helps you connect and share with the people in your life.</h1>
 
@@ -19,7 +19,7 @@ function signIn({ providers }) {
                 Sign in with {provider.name}
               </button>
 
-              <div className="absolute bottom-4 flex justify-items-center items-center ">
+              <div className="absolute h-6 bottom-4 flex justify-items-center items-center ">
                 <p className="text-xs   ">Created with ❤ By -</p>
                 <p className="text-xs font-bold ml-1">OM PRAKASH</p>
               </div>

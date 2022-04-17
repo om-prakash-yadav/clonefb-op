@@ -20,7 +20,7 @@ function Login() {
           Get Started
         </button>
       </div>
-      <div className="absolute bottom-4 flex justify-items-center items-center  ">
+      <div className="absolute bottom-4 flex justify-items-center items-center h-6 ">
         <p className="text-xs   ">Created with ❤ By -</p>
         <p className="text-xs font-bold ml-1">OM PRAKASH</p>
       </div>

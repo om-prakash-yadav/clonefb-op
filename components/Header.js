@@ -57,7 +57,7 @@ function Header() {
 
             
             </div>
-            <LogoutIcon className="h-7 mx-2" onClick={signOut} />
+            <LogoutIcon className="h-7 mx-4" onClick={signOut} />
           </div>
         </div>
 
