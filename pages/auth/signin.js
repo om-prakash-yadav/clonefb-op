@@ -13,11 +13,12 @@ function signIn({ providers }) {
       {Object.values(providers).map((provider) => (
             <div key={provider.name}>
               <button
-                className="md:p-3 p-2 px-3 bg-blue-500 text-white rounded-md"
+                className="md:p-3 p-2 flex items-center px-3 border-2 focus:ring-2 ring-blue-400 rounded-md text-md font-semibold"
                 onClick={() =>
                   SignIntoProvider(provider.id, { callbackUrl: "/" })
                 }
               >
+                 <img src="https://tailus.io/sources/blocks/social/preview/images/google.svg" className="w-5 mr-4" alt="google logo"></img>
                 Sign in with {provider.name}
               </button>
             </div>
