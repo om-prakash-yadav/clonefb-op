@@ -45,7 +45,7 @@ function Post({ name, message, postImage, image, timestamp }) {
       <div className="flex justify-between items-center md:rounded-b-2xl bg-white shadow-md text-gray-400 border-t">
         <div  onClick={toggleClass}  className="inputIcon rounded-none md:rounded-bl-2xl">
           <div className="flex ">
-            <ThumbUpIcon   className={isActive ? "h-5 md:h-6 fill-blue-400 text-blue-600": "h-5 md:h-6 text-blue-600   mr-2"} 
+            <ThumbUpIcon   className={isActive ? "h-5 md:h-6 fill-blue-400 text-blue-600 mr-2": "h-5 md:h-6 mr-2"} 
       />
             <p className="flex  text-xs justify-center items-center sm:text-base">
               {isActive ? "You Liked":"Like"}
