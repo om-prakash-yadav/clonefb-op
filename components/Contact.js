@@ -11,7 +11,9 @@ function Contact({src , name}) {
             layout="fixed"
   />
   <p>{name}</p>
-  <div className="absolute bottom-2 left-7 bg-green-400 h-3 w-3 rounded-full  animate-pulse ">
+  <div className="absolute bottom-2 left-7 bg-green-500 h-3 w-3 rounded-full ">
+      </div>
+  <div className="absolute bottom-2 left-7 bg-green-400 h-3 w-3 rounded-full  animate-ping ">
 
   </div>
         </div>
